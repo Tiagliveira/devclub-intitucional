@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #101828;
+  --color-cyber-card: #141B2D;
+  --color-cyber-cyan: #00FFFF;
+  --color-cyber-magenta: #FF00FF;
+  --color-cyber-white: #E0E6ED;
+}
+
+
+body {
+  @apply bg-background text-cyber-white font-sans p-0 m-0;
+}
+
+@theme {
+  --animate-marquee: marquee 35s linear infinite;
+  --animate-marquee-reverse: marquee-reverse 40s linear infinite;
+
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+  }
+
+  @keyframes marquee-reverse {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0%); }
+  }
+}
+
+.animate-marquee:hover,
+.animate-marquee-reverse:hover {
+  animation-play-state: paused;
+}
+
+@theme {
+  --animate-company-marquee: company-marquee 35s linear infinite;
+  --animate-company-marquee-reverse: company-marquee-reverse 40s linear infinite;
+
+  @keyframes company-marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+  }
+
+  @keyframes company-marquee-reverse {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0%); }
+  }
+}
+
+.animate-company-marquee:hover,
+.animate-company-marquee-reverse:hover {
+  animation-play-state: paused;
+}
+
+
+@theme {
+  --animate-float-slow: float 6s ease-in-out infinite;
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+}
