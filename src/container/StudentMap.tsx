@@ -69,7 +69,6 @@ export default function StudentMap({ visibleCount }: StudentMapProps) {
                 backgroundColor="rgba(0,0,0,0)"
                 showAtmosphere={true}
                 atmosphereColor="#22c55e"
-                atmosphereThickness={0.07}
                 globeImageUrl="//unpkg.com/three-globe/example/img/earth-dark.jpg"
                 polygonsData={countriesGeoJson.features}
                 polygonCapColor={() => 'rgba(0, 0, 0, 0)'}
