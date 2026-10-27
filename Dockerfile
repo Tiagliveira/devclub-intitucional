@@ -1,8 +1,12 @@
 # Estágio 1: Build da aplicação com Node 20
 FROM node:20-alpine AS builder
 WORKDIR /app
+
 COPY package*.json ./
-RUN npm install
+
+# Adicionado --legacy-peer-deps para evitar o erro de 'edgesOut' no npm
+RUN npm install --legacy-peer-deps
+
 COPY . .
 RUN npm run build
 
